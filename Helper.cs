@@ -8,14 +8,18 @@ namespace Mission4
 {
     internal class Helper
     {
-        public string printBoard(string[] boardArray)
+        public string printBoard(string[] board)
         {
-            return null;
+            Console.WriteLine(" {0} | {1} | {2} ", board[0], board[1], board[2]);
+            Console.WriteLine("---|---|---");
+            Console.WriteLine(" {0} | {1} | {2} ", board[3], board[4], board[5]);
+            Console.WriteLine("---|---|---");
+            Console.WriteLine(" {0} | {1} | {2} ", board[6], board[7], board[8]);
         }
 
-        public string hasWinner(string[] boardArray)
+        public bool hasWinner(string[] board)
         {
-            return null;
+            return false;
         }
     }
 }
