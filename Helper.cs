@@ -19,6 +19,16 @@ namespace Mission4
 
         public bool hasWinner(string[] board)
         {
+            // Check diagonals
+            if (board[0] == board[4] && board[4] == board[8])
+            {
+                return true;
+            }
+            if (board[2] == board[4] && board[4] == board[6])
+            {
+                return true;
+            }
+
             // Check rows
             for (int i = 0; i < 3; i++)
             {
@@ -36,16 +46,7 @@ namespace Mission4
                     return true;
                 }
             }
-
-            // Check diagonals
-            if (board[0] == board[4] && board[4] == board[8])
-            {
-                return true;
-            }
-            if (board[2] == board[4] && board[4] == board[6])
-            {
-                return true;
-            }
+ 
 
             return false;
         }

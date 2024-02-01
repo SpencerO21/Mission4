@@ -23,6 +23,7 @@ class Program
         {
             // Prompt the player
             Console.WriteLine($"Player {playerNum}, where will you play? 1-9");
+            h.printBoard( board );
             string playerChoice = Console.ReadLine();
 
             if (int.TryParse(playerChoice, out int playerChoiceInt) &&
