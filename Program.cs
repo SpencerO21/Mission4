@@ -4,6 +4,11 @@ using Mission4;
 
 class Program
 {
+
+    static void Main(string[] args)
+    {
+        Driver();
+    }
     static void Driver()
     {
         Console.WriteLine("Welcome to Tic-Tac-Toe.");
@@ -16,6 +21,7 @@ class Program
 
         do
         {
+            // Prompt the player
             Console.WriteLine($"Player {playerNum}, where will you play? 1-9");
             string playerChoice = Console.ReadLine();
 
@@ -25,12 +31,13 @@ class Program
             {
                 board[playerChoiceInt - 1] = (playerNum == 1) ? "X" : "O";
                 h.printBoard(board);
-
+                // Checks for winner
                 if (h.hasWinner(board))
                 {
                     Console.WriteLine($"Player {playerNum} wins!");
                     exitLoop = true;
                 }
+                // Checks for tie
                 else if (!board.Contains("1") && !board.Contains("2") && !board.Contains("3") &&
                          !board.Contains("4") && !board.Contains("5") && !board.Contains("6") &&
                          !board.Contains("7") && !board.Contains("8") && !board.Contains("9"))
@@ -39,6 +46,7 @@ class Program
                     exitLoop = true;
                 }
 
+                // Switch players
                 playerNum = (playerNum == 1) ? 2 : 1;
             }
             else
