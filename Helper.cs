@@ -30,7 +30,7 @@ namespace Mission4
             }
 
             // Check rows
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 9; i += 3) // Increment by 3 for each row
             {
                 if (board[i] == board[i + 1] && board[i + 1] == board[i + 2])
                 {
@@ -39,16 +39,16 @@ namespace Mission4
             }
 
             // Check columns
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 3; i++) // Increment by 1 for each column
             {
                 if (board[i] == board[i + 3] && board[i + 3] == board[i + 6])
                 {
                     return true;
                 }
             }
- 
 
             return false;
         }
+
     }
 }
